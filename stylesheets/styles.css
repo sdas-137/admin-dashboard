@@ -2,10 +2,12 @@
 
 body {
     height: 100vh;
-    font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: var(--font-stack);
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr 2fr;
+
+    --font-stack: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body > div {
@@ -40,6 +42,11 @@ body > div {
     grid-template-rows: 1fr 3fr 3fr;
 }
 
+.logo > img {   /* Alt text is too big */
+    all: initial;
+    font-family: var(--font-stack);
+}
+
 .sidebar ul {
     list-style-type: none;
     padding: 0;
@@ -47,7 +54,8 @@ body > div {
 }
 
 .sidebar ul li {
-    display: flex;
+    display: grid; /* Use flex? */
+    grid-template-columns: 1fr 1fr;
 }
 
 .main-content {
@@ -62,4 +70,16 @@ body > div {
 
 .projects {
     grid-row: 1 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr repeat(3, 15fr);
+}
+
+.projects > h2 {
+    grid-column: 1 / 3;
+}
+
+.card > div {
+    display: grid; /* Use flex? */
+    grid-template-columns: 15fr 1fr 1fr 1fr;
 }
