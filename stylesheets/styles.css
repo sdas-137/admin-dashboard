@@ -17,6 +17,10 @@ body > div,
     border: 1px solid black; /* Highlight main grid layout */
 }
 
+img[src$='.svg'] { /* Resize svgs */
+    width: 1rem;
+}
+
 .header {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
@@ -45,9 +49,10 @@ body > div,
     grid-template-rows: 1fr 3fr 3fr;
 }
 
-.logo > img {   /* Alt text is too big */
+.logo > img {   /* Alt text is too big in logo img*/
     all: initial;
     font-family: var(--font-stack);
+    width: 1rem;
 }
 
 .sidebar ul {
