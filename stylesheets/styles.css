@@ -9,7 +9,6 @@ body {
 }
 
 body > div,
-.sidebar > ul,
 .main-content > div,
 .projects > div,
 .announcements > div,
@@ -51,18 +50,35 @@ img[src$='.png'] { /* Round profile pictures */
     overflow: auto;
     display: grid;
     grid-template-rows: 1fr 3fr 3fr;
+    background-color: #4287f5;
+    color: #FFFFFF;
+}
+
+.sidebar img {
+    filter: invert(100%) brightness(200%); /* Make black icons white */
+    position: relative;
+    top: 0.15em;
+    margin: 0 1em 0 1em;
 }
 
 .logo > img {   /* Alt text is too big in logo img*/
     all: initial;
     font-family: var(--font-stack);
     width: 3rem;
+    filter: invert(100%) brightness(200%);
+    position: relative;
+    top: 0.75em;
+    margin: 0 1em 0 1em;
 }
 
 .sidebar ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
+
+.sidebar li {
+    margin-bottom: 1em;
 }
 
 .main-content {
