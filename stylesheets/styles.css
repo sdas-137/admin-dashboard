@@ -21,6 +21,10 @@ img[src$='.svg'] { /* Resize svgs */
     width: 1rem;
 }
 
+img[src$='.png'] { /* Round profile pictures */
+    border-radius: 50%;
+}
+
 .header {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
@@ -90,4 +94,9 @@ img[src$='.svg'] { /* Resize svgs */
 
 .minicard {
     display: flex;
+}
+
+.minicard > img {
+    height: 4em;
+    width: 4em;
 }
