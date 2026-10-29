@@ -59,7 +59,7 @@ input:focus-visible {
 }
 
 .header .bottom {
-    grid-template-columns: 1fr 5fr 1fr 1fr 1fr;
+    grid-template-columns: 6em 5fr 1fr 1fr 1fr;
     align-content: center;
     justify-items: center;
 }
@@ -73,11 +73,12 @@ button {
     font: inherit;
     cursor: pointer;
     outline: none;
+    margin-left: 1em;
 
 }
 
 .bottom > img {
-    height: auto;
+    height: 6em;
     width: 6em;
 }
 
@@ -126,12 +127,18 @@ button {
     grid-column: 2 / 3;
     display: grid;
     grid-template-columns: 3fr 2fr;
+    background-color: #F0F0F0;
+    position: relative;
+    top: 4px;
+    padding: 2em;
+    gap: 2em;
 }
 
 .projects {
     grid-row: 1 / 3;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 2em;
 }
 
 .projects > h2 {
@@ -142,18 +149,53 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: #FFFFFF;
+    padding: 2em 1em;
+    border-left: 1em solid #FFBF00;
+    border-radius: 1em;
+    box-shadow: 2px 2px 6px #888888;
 }
 
 .card > .options {
     display: flex;
     justify-content: end;
+    margin-top: 0.3em;
+}
+
+.card img {
+    margin-left: 10%;
+}
+
+.announcements > h2,
+.trending > h2 {
+    margin-bottom: 1.3em;
+}
+
+.announcements-box,
+.trending-box {
+    background-color: #FFFFFF;
+    padding: 2em 1em;
+    border-radius: 1em;
+    box-shadow: 2px 2px 6px #888888;
+}
+
+.announcements-box > p:nth-of-type(-n + 2) {
+    margin-bottom: 1em;
+    border-bottom: 3.2px solid #EAEAEA;
+    padding-bottom: 1em;
 }
 
 .minicard {
     display: flex;
+    margin-bottom: 1em;
 }
 
 .minicard > img {
-    height: auto;
+    height: 3em;
     width: 3em;
+    margin-right: 1em;
+}
+
+.handle {
+    font-weight: bold;
 }
